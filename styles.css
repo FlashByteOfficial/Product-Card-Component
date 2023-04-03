@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Variables */
+:root {
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+
+  --neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  --font-size: 15px;
+  --font-family-montserrat: "Montserrat", sans-serif;
+  --font-family-fraunces: "Fraunces", serif;
+}
+
+/* Utility Classes */
+.fm-fraunces {
+  font-family: var(--font-family-fraunces);
+}
+
+.fm-montserrat {
+  font-family: var(--font-family-montserrat);
+}
+
+.nd-grayish-blue {
+  color: var(--neutral-dark-grayish-blue);
+}
+
+/* General CSS */
+
+body {
+  background-color: var(--primary-cream);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-right-container h1 {
+  font-weight: 700;
+}
+
+.inner-right-container h4 {
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.inner-right-container h2 {
+  color: var(--primary-dark-cyan);
+  margin: 20px 0;
+  font-size: 2.3rem;
+}
+
+.inner-right-container p {
+  font-size: 0.95rem;
+}
+
+.btn {
+  border: none;
+  background: none;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.flex-container {
+  display: flex;
+  max-width: 610px;
+  min-width: 560px;
+  height: 450px;
+  background-color: var(--neutral-white);
+  gap: 20px;
+}
+
+.flex-items {
+  flex: 1;
+}
+
+.inner-right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px 20px 20px 0;
+}
+
+.cart-container {
+  display: flex;
+  color: var(--neutral-white);
+  background-color: var(--primary-dark-cyan);
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.cart-container:hover {
+  background-color: hsl(159, 31%, 28%);
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricing > h3 {
+  justify-self: center;
+}
+
+/* Media Queries */
+@media (max-width: 550px) {
+  .flex-container {
+    flex-direction: column;
+    height: max-content;
+    background-color: var(--neutral-white);
+    padding: 20px;
+    border-radius: 15px;
+    gap: 10px;
+    min-width: 330px;
+    max-width: 350px;
+  }
+
+  .flex-container > .inner-right-container {
+    padding: 15px;
+  }
+
+  .flex-container > img {
+    flex-basis: 400px;
+  }
+  .pricing > h3 {
+    margin-right: 25px;
+  }
+}
